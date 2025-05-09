@@ -85,21 +85,13 @@ const contactForm = document.getElementById('contact-form');
 
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+        // Let the form open the mailto link
+        // Don't need to prevent default or do manual handling
         
-        // Get form data
-        const formData = new FormData(this);
-        const formObject = Object.fromEntries(formData);
-        
-        // Simulate form submission
-        // In a real scenario, you'd submit this to your backend or email service
-        console.log('Form data:', formObject);
-        
-        // Show success message
-        alert('Thank you for your message! I will contact you soon.');
-        
-        // Reset form
-        this.reset();
+        // Show success message after a delay
+        setTimeout(() => {
+            this.reset();
+        }, 1000);
     });
 }
 
