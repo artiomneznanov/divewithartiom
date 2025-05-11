@@ -80,18 +80,13 @@ handleScrollAnimations();
 // Run on scroll
 window.addEventListener('scroll', handleScrollAnimations);
 
-// Contact Form Submission
+// Form Handling
 const contactForm = document.getElementById('contact-form');
-
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        // Let the form open the mailto link
-        // Don't need to prevent default or do manual handling
-        
-        // Show success message after a delay
-        setTimeout(() => {
-            this.reset();
-        }, 1000);
+        const submitButton = this.querySelector('.submit-btn');
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
     });
 }
 

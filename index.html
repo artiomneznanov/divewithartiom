@@ -96,20 +96,26 @@
                 <div class="section-header">
                     <h2>About Me</h2>
                 </div>
-                <p>With over 10 years of freediving experience and international certification, I bring passion and expertise to every lesson. My teaching philosophy centers on safety, mindfulness, and progressive skill development.</p>
-                <p>I've trained with world champions and have competed internationally, but my true passion is helping others discover the transformative power of freediving.</p>
+                <p>Hi, I'm Artiom Neznanov, a 38-year-old freediving instructor based in Haugesund, Norway, where I've made my home for the past 14 years. Originally from Lithuania, I bring a multicultural perspective to my teaching, speaking five languages fluently: English, Lithuanian, Russian, Polish, and Norwegian.</p>
+                
+                <p>My freediving journey began in 2020 with humble beginnings in a local lake. Armed with just a triathlon wetsuit and boundless curiosity, I took my first dives to 8 meters, navigating through challenging conditions with almost zero visibility and strong thermoclines. This initial experience sparked a deep passion that led me to Dahab, the world-renowned "mecca of freediving," where I explored iconic sites like the Lighthouse and the legendary Blue Hole.</p>
+                
+                <p>In 2025, I took a significant step in my professional development by completing a comprehensive 3-week AIDA instructor course in Sharm el Sheikh under the guidance of Loïc Vuillemin, also known as The Deepest Monk. This intensive training equipped me with the expertise to teach freediving with a focus on safety, calmness, and deep respect for each individual's unique journey underwater.</p>
+                
+                <p>Whether you're taking your first breath-hold or aiming to explore greater depths, I'm here to guide you at your own pace. Let's embark on this underwater adventure together.</p>
+                
                 <div class="credentials">
                     <div class="credential">
                         <i class="fas fa-certificate"></i>
-                        <p>Certified Instructor</p>
+                        <p>AIDA Certified Instructor</p>
                     </div>
                     <div class="credential">
-                        <i class="fas fa-heartbeat"></i>
-                        <p>Safety Expert</p>
+                        <i class="fas fa-globe"></i>
+                        <p>Multilingual Guide</p>
                     </div>
                     <div class="credential">
-                        <i class="fas fa-trophy"></i>
-                        <p>Competition Experience</p>
+                        <i class="fas fa-heart"></i>
+                        <p>Personal Approach</p>
                     </div>
                 </div>
             </div>
@@ -233,7 +239,18 @@
                         <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <form id="contact-form" class="contact-form fade-in" action="mailto:artiom.n@gmail.com" method="post" enctype="text/plain">
+                <form id="contact-form" class="contact-form fade-in" action="https://formsubmit.co/staveland@live.no" method="POST">
+                    <!-- Honeypot to prevent spam -->
+                    <input type="text" name="_honey" style="display:none">
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Specify redirect after submission -->
+                    <input type="hidden" name="_next" value="https://divewithartiom.com/thanks.html">
+                    <!-- Customize email subject -->
+                    <input type="hidden" name="_subject" value="New freediving inquiry from website">
+                    <!-- Add template -->
+                    <input type="hidden" name="_template" value="table">
+                    
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -244,22 +261,23 @@
                     </div>
                     <div class="form-group">
                         <label for="service">Interested In</label>
-                        <select id="service" name="service">
-                            <option value="aida1">AIDA 1 - Introduction</option>
-                            <option value="aida2">AIDA 2 - Beginner</option>
-                            <option value="aida3">AIDA 3 - Advanced</option>
-                            <option value="safety">Safety Buddy</option>
-                            <option value="equalization">Equalization Class</option>
-                            <option value="private">Private Session</option>
-                            <option value="dry">Dry Session + Open Water</option>
-                            <option value="other">Other</option>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="AIDA 1 - Introduction">AIDA 1 - Introduction</option>
+                            <option value="AIDA 2 - Beginner">AIDA 2 - Beginner</option>
+                            <option value="AIDA 3 - Advanced">AIDA 3 - Advanced</option>
+                            <option value="Safety Buddy">Safety Buddy</option>
+                            <option value="Equalization Class">Equalization Class</option>
+                            <option value="Private Session">Private Session</option>
+                            <option value="Dry Session + Open Water">Dry Session + Open Water</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn" onclick="console.log('Submit button clicked')">Send Message</button>
                 </form>
             </div>
         </section>
