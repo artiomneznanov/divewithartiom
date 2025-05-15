@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freediving Instructor Norway</title>
+    <title>Dive With Artiom | Freediving Instructor in Norway</title>
+
+    <!-- SEO & Social Meta -->
+    <meta name="description" content="Professional freediving courses and coaching in Norway. Learn from certified instructor Artiom Neznanov in Haugesund. Start your underwater adventure today!">
+    <meta property="og:title" content="Dive With Artiom – Freediving Instructor Norway" />
+    <meta property="og:description" content="Professional freediving courses and coaching in Haugesund, Norway. Start your underwater adventure with Artiom Neznanov." />
+    <meta property="og:image" content="header.jpg" />
+    <meta property="og:url" content="https://divewithartiom.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,15 +29,19 @@
         </button>
     </div>
 
-    <header>
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+    <div id="nav-overlay"></div>
+
+    <header id="main-header">
         <nav>
-            <div class="logo">Dive With Artiom</div>
+            <div class="logo" id="logo">Dive With Artiom</div>
             <ul class="nav-links">
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="mobile-menu-btn">
+            <div class="mobile-menu-btn" id="burger-btn" aria-label="Open navigation" aria-expanded="false">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -229,7 +244,7 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn" onclick="console.log('Submit button clicked')">Send Message</button>
+                    <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>
         </section>
@@ -258,4 +273,4 @@
 
     <script src="main.js"></script>
 </body>
-</html> 
+</html>
