@@ -104,14 +104,9 @@ handleScrollAnimations();
 window.addEventListener('scroll', handleScrollAnimations);
 
 // Micro-interactions & Animations
-document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mouseenter', function () {
-        card.classList.add('card-bounce');
-    });
-    card.addEventListener('animationend', function () {
-        card.classList.remove('card-bounce');
-    });
-});
+// Subtle hover effects are handled via CSS. Previous
+// "bounce" animation on service cards was removed for
+// a smoother user experience.
 document.querySelectorAll('.cta-button, .service-cta, .submit-btn').forEach(btn => {
     btn.addEventListener('mousedown', function () {
         btn.classList.add('wave-animate');
