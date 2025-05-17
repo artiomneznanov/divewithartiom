@@ -172,20 +172,20 @@
         document.addEventListener('DOMContentLoaded', function() {
             const themeSwitch = document.getElementById('theme-switch');
             const body = document.body;
-            
+
             // Check for saved theme preference
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                body.className = savedTheme;
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'enabled') {
+                body.classList.add('dark-mode');
             }
 
             themeSwitch.addEventListener('click', function() {
-                if (body.classList.contains('light-mode')) {
-                    body.classList.replace('light-mode', 'dark-mode');
-                    localStorage.setItem('theme', 'dark-mode');
+                if (body.classList.contains('dark-mode')) {
+                    body.classList.remove('dark-mode');
+                    localStorage.setItem('darkMode', 'disabled');
                 } else {
-                    body.classList.replace('dark-mode', 'light-mode');
-                    localStorage.setItem('theme', 'light-mode');
+                    body.classList.add('dark-mode');
+                    localStorage.setItem('darkMode', 'enabled');
                 }
             });
         });
