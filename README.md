@@ -28,7 +28,7 @@ A professional website for a freediving instructor showcasing services, pricing,
 
 2. Navigate to the project directory:
    ```
-   cd freediving-website
+   cd divewithartiom
    ```
 
 3. Open the `index.html` file in your browser:
